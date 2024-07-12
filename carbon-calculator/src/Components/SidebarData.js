@@ -14,5 +14,9 @@ export const SidebarData = [
   {
     title: "Improvement Suggestions",
     link: "/dashboard/improvement"
+  },
+  {
+    title: "Leaderboards",
+    link: "/dashboard/leaderboard"
   }
 ]
