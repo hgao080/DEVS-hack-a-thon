@@ -1,0 +1,44 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 12rem;
+  gap: 1rem;
+}
+
+.text_green {
+  color: green;
+}
+
+
+.icon {
+  font-size: 2rem;
+  color: green;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-right: 12rem;
+}
+
+.buttons > li {
+  padding: 8px 12px;
+  border: 1px black solid;
+  border-radius: 1rem;
+}
+
+.buttons > li:hover {
+  cursor: pointer;
+}

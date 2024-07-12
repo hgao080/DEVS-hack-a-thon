@@ -1,0 +1,14 @@
+.nav {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.buttons > li:hover {
+  cursor: pointer;
+}
