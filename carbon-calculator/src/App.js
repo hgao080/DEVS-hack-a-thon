@@ -6,6 +6,7 @@ import Dashboard from './Pages/Dashboard';
 import Board from './Pages/Board';
 import About from "./Pages/About"
 import DashboardImprovement from "./Pages/DashboardImprovement"
+import ContactUs from "./Pages/ContactUs";
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/contact',
-    element: <MainPage />,
+    element: <ContactUs />,
   },
   {
     path: '/dashboard',
