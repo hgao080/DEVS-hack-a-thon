@@ -10,19 +10,19 @@ function createData(Month, amount) {
 }
 
 const rows = [
-  createData('January', 630000),
-  createData('February', 630000),
-  createData('March', 630000),
-  createData('April', 630000),
-  createData('May', 630000),
-  createData('June', 630000),
-  createData('July', 630000),
+  createData('January', 630),
+  createData('February', 630),
+  createData('March', 630),
+  createData('April', 630),
+  createData('May', 630),
+  createData('June', 630),
+  createData('July', 630),
   createData('August', 0), // Placeholder for August
   createData('September', 0), // Placeholder for September
   createData('October', 0), // Placeholder for October
   createData('November', 0), // Placeholder for November
   createData('December', 0), // Placeholder for December
-  createData('Total', 4410000),
+  createData('Total', 4410),
 ];
 
 const DashboardYear = () => {
@@ -43,7 +43,7 @@ const DashboardYear = () => {
             <TableHead>
               <TableRow>
                 <TableCell>Month</TableCell>
-                <TableCell align="right">Carbon Emissions (g)</TableCell>
+                <TableCell align="right">Carbon Emissions (kg)</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
