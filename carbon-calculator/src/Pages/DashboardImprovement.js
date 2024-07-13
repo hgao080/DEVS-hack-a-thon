@@ -8,7 +8,7 @@ const avgValues = [192, 12, 42, 0, 15]
 
 const DashboardImprovement = () => {
   const [suggestions, setSuggestions] = useState([])
-  const results = ["100", "15", "44", "2", "17"]
+  const results = ["200", "15", "44", "2", "12"]
 
   useEffect(() => {
     const updatedSuggestions = results.map((result, index) => {
@@ -50,9 +50,13 @@ const DashboardImprovement = () => {
         <Sidebar />
       </div>
       <div className={styles.right}>
-        <div className={styles.blue}>
-          <Logo />
-          <div className={styles.suggestions}>Today's Suggestions</div></div>
+        <div className={styles.logo}>
+          <div>
+            <Logo />
+          </div>
+        </div>
+
+        <div className={styles.suggestionsTitle}>Today's Suggestions</div>
         <div className={styles.improvements}>
           <SuggestionList suggestions={suggestions} />
         </div>

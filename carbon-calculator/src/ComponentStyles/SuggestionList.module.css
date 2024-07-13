@@ -1,15 +1,15 @@
-.list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: auto;
-  list-style-type: circle;
+.container {
   height: 100%;
 }
 
+.list {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  list-style-type: circle;
+}
+
 .suggestion {
-  font-size: 35px;
-  text-wrap: wrap;
-  margin-bottom: 20px;
-  margin-left: 20px;
+  font-size: 20px;
 }
