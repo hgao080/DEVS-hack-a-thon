@@ -20,6 +20,7 @@
 
 .buttons li {
   padding: 0.5rem 0.7rem;
+  transition: transform 0.4s ease-out;
 }
 
 .buttons > li:hover {
@@ -29,4 +30,5 @@
   background-color: green;
   color: white;
   border-color: white;
+  border-radius: 1rem;
 }

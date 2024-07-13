@@ -5,10 +5,9 @@ const Nav = () => {
   return (
     <nav className={styles.nav}>
       <ul className={styles.buttons}>
-        <Link to="/" style={{ textDecoration: 'none', color: "black" }}><li id={styles[window.location.pathname == "/" ? "active" : ""]} className={styles.button}>Home</li></Link>
-        <Link to="/daily" style={{ textDecoration: 'none', color: "black" }}><li id={styles[window.location.pathname == "/daily" ? "active" : ""]}>Daily Inputted Emissions</li></Link>
-        <Link to="/about" style={{ textDecoration: 'none', color: "black" }}><li id={styles[window.location.pathname == "/about" ? "active" : ""]}>About Us</li></Link>
-        <Link to="/contact" style={{ textDecoration: 'none', color: "black" }}><li id={styles[window.location.pathname == "/contact" ? "active" : ""]}>Contact Us</li></Link>
+        <li id={styles[window.location.pathname == "/" ? "active" : ""]} onClick={() => {window.location.pathname="/"}}>Home</li>
+        <li id={styles[window.location.pathname == "/about" ? "active" : ""]} onClick={() => {window.location.pathname="/about"}}>About Us</li>
+        <li id={styles[window.location.pathname == "/contact" ? "active" : ""]} onClick={() => {window.location.pathname="/contact"}}>Contact Us</li>
       </ul>
     </nav>
   );
