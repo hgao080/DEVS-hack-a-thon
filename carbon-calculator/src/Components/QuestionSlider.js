@@ -86,7 +86,7 @@ export default function QuestionSlider() {
                     return (
                         <div className={ currentQuestionIndex === index ? questionSliderStyle.questionVisible : questionSliderStyle.questionHidden } 
                             style={{
-                                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('${questionSlide.imgUrl}')`,
+                                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('${questionSlide.imgUrl}')`,
                                 backgroundSize: 'cover'}}
                         >
                             <Typography variant="h3" color="white" className={questionSliderStyle.header}>
