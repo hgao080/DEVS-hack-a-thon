@@ -7,7 +7,20 @@ import TextField from '@mui/material/TextField';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import questionSlidesData from '../data/questionSlides.json';
 
-const values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; // Constant multipliers
+// IF YOU WANT TO CHANGE THE SLIDES OR VALUES: 
+// To change MULTIPLIER VALUES edit the values array
+// To change A QUESTION SLIDE go to questionSlides.json and edit the values
+
+const values = [
+    0.171, // Q1 multiplier value
+    0.4, // Q2 multiplier value - For this I did (250g / 5min x 8min)/1000, 8min is the average shower time 
+    0.0314, // Q3 multiplier value
+    154, // Q4 multiplier value - For this I did (175g/km x 900km/h)
+    0.0938, // Q5 multiplier value - For this I did (108.46g/km x 50km/h x 1h/60min)  / 1000
+    0.0792, // Q6 multiplier value - For this I did (35.46g/km x 120km/h x 1h/60min) / 1000
+    0.062, // Q7 mutliplier value 
+]; // Constant multipliers
+
 const questionSlides = questionSlidesData.questionSlides;
 
 export default function QuestionSlider() {
@@ -52,7 +65,7 @@ export default function QuestionSlider() {
         const newResults = [...results];
         newResults[currentQuestionIndex] = result;
         setResults(newResults);
-        console.log(results); // This might log the previous state of results
+        console.log(results);
     }
 
     useEffect(() => {
@@ -86,7 +99,7 @@ export default function QuestionSlider() {
                     return (
                         <div className={ currentQuestionIndex === index ? questionSliderStyle.questionVisible : questionSliderStyle.questionHidden } 
                             style={{
-                                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('${questionSlide.imgUrl}')`,
+                                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('${questionSlide.imgUrl}')`,
                                 backgroundSize: 'cover'}}
                         >
                             <Typography variant="h3" color="white" className={questionSliderStyle.header}>
