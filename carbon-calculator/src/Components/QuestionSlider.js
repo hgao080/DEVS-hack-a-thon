@@ -75,17 +75,6 @@ export default function QuestionSlider() {
     const newResults = [...results];
     newResults[currentQuestionIndex] = result;
     setResults(newResults);
-
-    if (currentQuestionIndex == 6) {
-      setJSONData({ currentDate, results})
-      fetch("http://localhost:8000/results/", {
-        method: 'POST',
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(JSONData)
-      }).then(() => {
-        console.log(JSONData);
-      })
-    }
   }
 
   useEffect(() => {
@@ -99,6 +88,15 @@ export default function QuestionSlider() {
   const handleSubmit = () => {
     handleCalculate();
     nextQuestion();
+    
+    setJSONData({ currentDate, results })
+    fetch("http://localhost:8000/results/", {
+      method: 'POST',
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(JSONData)
+    }).then(() => {
+      console.log(JSONData);
+    })
   }
 
   const theme = createTheme()
