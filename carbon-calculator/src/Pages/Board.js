@@ -24,7 +24,7 @@ export default function Board() {
           </div>
         </div>
         <div className={styles.Leaderboard}>
-          <h1 className={styles.htext}>Leaderboard</h1>
+          <h1 className={styles.text}>Leaderboard</h1>
           <div className={styles.duration}>
             <button onClick={() => handleClick('weekly')} className={viewMode === 'weekly' ? 'active' : ''} data-id='7'>Weekly</button>
             <button onClick={() => handleClick('yearly')} className={viewMode === 'yearly' ? 'active' : ''} data-id='365'>Yearly</button>

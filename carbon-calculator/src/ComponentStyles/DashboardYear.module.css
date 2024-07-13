@@ -11,6 +11,7 @@
     border: 1px solid black;
     padding: 20px; /* Add padding for spacing */
     box-sizing: border-box; /* Include padding in width calculation */
+    overflow: auto;
   }
   
   .title {
@@ -42,7 +43,15 @@
     text-decoration: underline;
     margin-bottom: 20px;
   }
-  
+  .logo {
+    position: absolute;
+    top: 8px;
+    right: 20px;
+    z-index: 2;
+    background-color: white;
+    border-radius: 1rem;
+  }
+
   /* Optional: Style table headers for better readability */
   .MuiTableCell-head {
     font-weight: bold;
