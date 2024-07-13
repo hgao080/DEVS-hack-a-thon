@@ -9,7 +9,9 @@ export default function QuestionPage() {
             <div className={QuestionPageStyle.sidebar}>
                 <Sidebar/>
             </div>
-            <QuestionSlider/>
+            <div className={QuestionPageStyle.questionSlider}>
+                <QuestionSlider/>
+            </div>
         </div>
     )
 }
