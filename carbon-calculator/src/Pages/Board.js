@@ -1,39 +1,38 @@
-import React, {useState} from 'react';
-import './Board.css';
+import React, { useState } from 'react';
 import Profiles from '../Components/Profiles';
 import Sidebar from '../Components/Sidebar';
-import { FaLeaf } from 'react-icons/fa';
 import { Leaderboard } from '../Components/Database';
+import styles from "../ComponentStyles/Board.module.css"
+import Logo from '../Components/Logo';
 
 export default function Board() {
-    const [viewMode, setViewMode] = useState('weekly'); 
+  const [viewMode, setViewMode] = useState('weekly');
 
-    const handleClick = (mode) => {
-        setViewMode(mode);
-    };
+  const handleClick = (mode) => {
+    setViewMode(mode);
+  };
 
-    return (
-        <div className="dashboard">
-            <div className="sidebar">
-                <Sidebar />
-            </div>
-            <div className="right">
-                <div className="title">
-                    <div className="titleright">
-                        <div className="text">Green<span className="green">Print</span>Life</div>
-                        <FaLeaf className="green" />
-                    </div>
-                </div>
-                <div className="Leaderboard">
-                    <h1>Leaderboard</h1>
-                    <div className="duration">
-                    <button onClick={() => handleClick('weekly')} className={viewMode === 'weekly' ? 'active' : ''} data-id='7'>Weekly</button>
-                    <button onClick={() => handleClick('yearly')} className={viewMode === 'yearly' ? 'active' : ''} data-id='365'>Yearly</button>
-                    </div>
-
-                    <Profiles Leaderboard={Leaderboard} viewMode = {viewMode} />
-                </div>
-            </div>
+  return (
+    <div className={styles.dashboard}>
+      <div className={styles.sidebar}>
+        <Sidebar />
+      </div>
+      <div className={styles.right}>
+        <div className={styles.title}>
+          <div>
+            <Logo />
+          </div>
         </div>
-    );
+        <div className={styles.Leaderboard}>
+          <h1 className={styles.htext}>Leaderboard</h1>
+          <div className={styles.duration}>
+            <button onClick={() => handleClick('weekly')} className={viewMode === 'weekly' ? 'active' : ''} data-id='7'>Weekly</button>
+            <button onClick={() => handleClick('yearly')} className={viewMode === 'yearly' ? 'active' : ''} data-id='365'>Yearly</button>
+          </div>
+
+          <Profiles Leaderboard={Leaderboard} viewMode={viewMode} />
+        </div>
+      </div>
+    </div>
+  );
 }

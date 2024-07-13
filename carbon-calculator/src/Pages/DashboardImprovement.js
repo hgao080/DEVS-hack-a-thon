@@ -4,16 +4,22 @@ import Sidebar from "../Components/Sidebar";
 import SuggestionList from "../Components/SuggestionList";
 import Logo from "../Components/Logo";
 
-const avgValues = [192, 12, 42, 0]
+const avgValues = [192, 12, 42, 0, 15]
 
 const DashboardImprovement = () => {
   const [suggestions, setSuggestions] = useState([])
-  const results = ["100", "15", "44", "2"]
+  const results = ["200", "15", "44", "2", "12"]
 
   useEffect(() => {
     const updatedSuggestions = results.map((result, index) => {
       const avg = avgValues[index];
       const res = parseInt(result, 10);
+
+      if (index == 4) {
+        if (res < avg) {
+          return "AT Transport ain't that bad"
+        }
+      }
 
       if (res > avg) {
         switch (index) {
@@ -25,6 +31,8 @@ const DashboardImprovement = () => {
             return "Man you rotted really badly this week. Go outside and touch some grass"
           case 3:
             return "Why'd you hop on a flight dude, could've just swam"
+          case 4:
+            return ""
           default:
             return "The coders are useless"
         }
@@ -42,9 +50,13 @@ const DashboardImprovement = () => {
         <Sidebar />
       </div>
       <div className={styles.right}>
-        <div className={styles.blue}>
-          <Logo />
-          <div className={styles.suggestions}>Today's Suggestions</div></div>
+        <div className={styles.logo}>
+          <div>
+            <Logo />
+          </div>
+        </div>
+
+        <div className={styles.suggestionsTitle}>Today's Suggestions</div>
         <div className={styles.improvements}>
           <SuggestionList suggestions={suggestions} />
         </div>

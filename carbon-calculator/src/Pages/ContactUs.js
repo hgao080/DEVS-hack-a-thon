@@ -1,16 +1,16 @@
 import Header from "../Components/Header";
 import Nav from "../Components/Nav";
-import "./ContactUs.css";
+import styles from "../ComponentStyles/ContactUs.module.css"
 
 const ContactUs = () => {
   return ( 
     <div className="">
       <Header />
       <Nav />
-      <div className="header">
-        <h1>Contact Us</h1>
+      <div className={styles.header}>
+        <h1 className={styles.header_text}>Contact Us</h1>
       </div>
-      <div className="container">
+      <div className={styles.container}>
         <form action="/action_page.php">
           <label htmlFor="fname">First Name</label>
           <input type="text" id="fname" name="firstname" placeholder="Your name.." />
