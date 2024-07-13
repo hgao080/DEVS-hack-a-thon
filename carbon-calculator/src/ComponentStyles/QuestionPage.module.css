@@ -7,3 +7,8 @@
     display: inline;
     height: 100%;
 }
+
+.questionSlider {
+    box-sizing: border-box;
+    width: calc(100% - 300px);
+}
