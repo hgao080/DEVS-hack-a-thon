@@ -1,4 +1,5 @@
 import Header from "../Components/Header";
+import MainPageFiller from "../Components/MainPageFiller";
 import Nav from "../Components/Nav"
 import Title from "../Components/Title"
 
@@ -8,6 +9,7 @@ const MainPage = () => {
       <Header />
       <Nav />
       <Title />
+      <MainPageFiller />
     </div>
    );
 }

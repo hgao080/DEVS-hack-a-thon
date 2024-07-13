@@ -11,7 +11,7 @@ function Sidebar() {
       <ul className={styles.sidebarList}>
         {SidebarData.map((val, key) => {
           return (
-            <li key={key} className={styles.row} id={styles[window.location.pathname == val.link]} onClick={() => {window.location.pathname = val.link}}>
+            <li key={key} className={styles.row} id={styles[window.location.pathname == val.link ? "active" : ""]} onClick={() => {window.location.pathname = val.link}}>
               <div className={styles.spacing}></div>
               <div className={styles.title}>{val.title}</div>
             </li>

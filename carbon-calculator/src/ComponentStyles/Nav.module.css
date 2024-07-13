@@ -9,6 +9,15 @@
   justify-content: space-evenly;
 }
 
+Link {
+  text-decoration: none;
+}
+
+.buttons #active {
+  color: black;
+  text-decoration: underline;
+}
+
 .buttons > li:hover {
   cursor: pointer;
 }
