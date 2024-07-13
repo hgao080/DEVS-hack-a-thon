@@ -3,10 +3,24 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { useState } from 'react';
 import MainPage from "./Pages/MainPage";
 import Dashboard from './Pages/Dashboard';
+import About from "./Pages/About"
+import DashboardImprovement from "./Pages/DashboardImprovement"
 
 const router = createBrowserRouter([
   {
     path: '/',
+    element: <MainPage />,
+  },
+  {
+    path: '/daily',
+    element: <MainPage />,
+  },
+  {
+    path: '/about',
+    element: <About />,
+  },
+  {
+    path: '/contact',
     element: <MainPage />,
   },
   {
@@ -23,7 +37,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/dashboard/improvement',
-    element: <Dashboard />,
+    element: <DashboardImprovement />,
   },
   {
     path: '/dashboard/leaderboard',
