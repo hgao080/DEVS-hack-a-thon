@@ -9,6 +9,7 @@ import About from "./Pages/About"
 import DashboardImprovement from "./Pages/DashboardImprovement"
 import ContactUs from "./Pages/ContactUs";
 import Login from "./Pages/Login"
+import DashboardYear from './Pages/DashboardYear';
 
 const router = createBrowserRouter([
   {
@@ -37,7 +38,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/dashboard/year',
-    element: <Dashboard />,
+    element: <DashboardYear />,
   },
   {
     path: '/dashboard/average',
