@@ -1,6 +1,6 @@
 export const SidebarData = [
   {
-    title: "Today's Print",
+    title: "This Week's Print",
     link: "/dashboard"
   },
   {
