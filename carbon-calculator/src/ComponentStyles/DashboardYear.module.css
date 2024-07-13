@@ -1,0 +1,69 @@
+.dashboard {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+  }
+.sidebar {
+  height: 100%;
+}
+  .right {
+    width: 100%;
+    border: 1px solid black;
+    padding: 20px; /* Add padding for spacing */
+    box-sizing: border-box; /* Include padding in width calculation */
+    overflow: auto;
+  }
+  
+  .title {
+    height: 50px; /* Adjust height for title bar */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Add margin bottom for spacing */
+  }
+  
+  .titleright {
+    display: flex;
+    align-items: center;
+  }
+  
+  .green {
+    color: green;
+  }
+  
+  .table-container {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+  }
+  
+  h1 {
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 20px;
+  }
+  .logo {
+    position: absolute;
+    top: 8px;
+    right: 20px;
+    z-index: 2;
+    background-color: white;
+    border-radius: 1rem;
+  }
+
+  /* Optional: Style table headers for better readability */
+  .MuiTableCell-head {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  /* Optional: Style table rows */
+  .MuiTableRow-root {
+    transition: background-color 0.3s; /* Optional: Add hover effect */
+  }
+  
+  .MuiTableRow-root:hover {
+    background-color: #e0e0e0; /* Optional: Light grey background on hover */
+  }
+  

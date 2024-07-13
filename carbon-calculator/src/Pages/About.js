@@ -13,7 +13,7 @@ const About = () => {
 
       <section className="about">
         <div className="main">
-          <img src="img/Person 1.png" />
+          <img src='tree.jpg' />
           <div className="discription">
             <p>Welcome to GreenPrintLife, where we are dedicated to fostering a sustainable future for all.
             Founded on the principles of environmental stewardship and community empowerment, GreenPrintLife strives to

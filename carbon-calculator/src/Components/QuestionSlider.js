@@ -20,6 +20,7 @@ const values = [
     0.0792, // Q6 multiplier value - For this I did (35.46g/km x 120km/h x 1h/60min) / 1000
     0.062, // Q7 mutliplier value 
 ]; // Constant multipliers
+
 const questionSlides = questionSlidesData.questionSlides;
 
 export default function QuestionSlider() {
