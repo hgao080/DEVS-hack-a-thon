@@ -11,12 +11,12 @@ function createData(Month, amount) {
 
 const rows = [
   createData('January', 630),
-  createData('February', 630),
-  createData('March', 630),
-  createData('April', 630),
-  createData('May', 630),
-  createData('June', 630),
-  createData('July', 630),
+  createData('February', 610),
+  createData('March', 650),
+  createData('April', 640),
+  createData('May', 620),
+  createData('June', 720),
+  createData('July', 540),
   createData('August', 0), // Placeholder for August
   createData('September', 0), // Placeholder for September
   createData('October', 0), // Placeholder for October
