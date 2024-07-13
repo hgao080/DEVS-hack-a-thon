@@ -3,9 +3,11 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { useState } from 'react';
 import MainPage from "./Pages/MainPage";
 import Dashboard from './Pages/Dashboard';
+import QuestionPage from './Pages/QuestionPage';
 import Board from './Pages/Board';
 import About from "./Pages/About"
 import DashboardImprovement from "./Pages/DashboardImprovement"
+import ContactUs from "./Pages/ContactUs";
 import Login from "./Pages/Login"
 
 const router = createBrowserRouter([
@@ -27,7 +29,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/contact',
-    element: <MainPage />,
+    element: <ContactUs />,
   },
   {
     path: '/dashboard',
@@ -43,7 +45,11 @@ const router = createBrowserRouter([
   },
   {
     path: '/dashboard/improvement',
-    element: <DashboardImprovement />,
+    element: <DashboardImprovement/>,
+  },
+  {
+    path: '/dashboard/questionnaire',
+    element: <QuestionPage />,
   },
   {
     path: '/dashboard/leaderboard',

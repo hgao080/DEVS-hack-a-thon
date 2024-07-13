@@ -1,0 +1,9 @@
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    display: inline;
+    height: 100%;
+}
