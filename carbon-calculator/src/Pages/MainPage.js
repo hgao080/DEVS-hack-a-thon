@@ -5,7 +5,7 @@ import Title from "../Components/Title"
 
 const MainPage = () => {
   return (
-    <div className="container">
+    <div >
       <Header />
       <Nav />
       <Title />
