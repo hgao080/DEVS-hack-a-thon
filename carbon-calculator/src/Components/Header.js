@@ -10,8 +10,8 @@ const Header = () => {
       </div>
 
       <ul className={styles.buttons}>
-        <li className={styles.login}>Sign In</li>
-        <li>Sign Up</li>
+        <li onClick={() => {window.location.pathname="/login"}}>Sign In</li>
+        <li onClick={() => {window.location.pathname="/login"}}>Sign Up</li>
       </ul>
     </header>
   )

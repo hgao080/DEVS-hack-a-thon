@@ -5,11 +5,16 @@ import MainPage from "./Pages/MainPage";
 import Dashboard from './Pages/Dashboard';
 import About from "./Pages/About"
 import DashboardImprovement from "./Pages/DashboardImprovement"
+import Login from "./Pages/Login"
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <MainPage />,
+  },
+  {
+    path: '/login',
+    element: <Login />,
   },
   {
     path: '/daily',

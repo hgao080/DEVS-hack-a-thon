@@ -1,0 +1,15 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: auto;
+  list-style-type: circle;
+  height: 100%;
+}
+
+.suggestion {
+  font-size: 35px;
+  text-wrap: wrap;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}

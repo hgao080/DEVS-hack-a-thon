@@ -1,11 +1,13 @@
+import styles from "../ComponentStyles/SuggestionList.module.css"
+
 const SuggestionList = (props) => {
   const suggestionList = props.suggestions
 
   return (
     <div className="suggestionList">
-      <ul className="list">
+      <ul className={styles.list}>
         {suggestionList.map((suggestion) => (
-          <li key={suggestion.id}>{suggestion.suggestion}</li>
+          <li key={suggestion.id} className={styles.suggestion}>{suggestion}</li>
         ))}
       </ul>
     </div>
