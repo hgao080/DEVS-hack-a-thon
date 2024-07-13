@@ -1,5 +1,6 @@
 import React from 'react';
 import '../Pages/Board.css'
+import styles from "../ComponentStyles/Board.module.css"
 
 export default function profiles({Leaderboard, viewMode}) {
     const filteredData = Leaderboard.map(person => ({
@@ -19,15 +20,15 @@ function Item({data}) {
     return (
         <div>
         {data.map((value, index) => (
-            <div className = "flex" key={index}>
-                <div className = "item">
+            <div className = {styles.flex} key={index}>
+                <div className = {styles.item}>
                     <img src={value.img} alt = ""/>
-                    <div className = "info">
+                    <div className = {styles.info}>
                         <h3 className = "name">{value.name}</h3>
                         <span>{value.location}</span>
                     </div>
                 </div>
-                <div className = "item score">
+                <div className = {`${styles.item} ${styles.score}`}>
                     <span>{value.score}</span>
                 </div>
             </div>
