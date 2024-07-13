@@ -1,8 +1,37 @@
 .dashboard {
+  display: flex;
   width: 100vw;
   height: 100vh;
 }
 
 .sidebar {
   height: 100%;
+}
+
+.right {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.welcome {
+  display: flex;
+  align-items: center;
+  height: 35%;
+  font-size: 40px;
+}
+.title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+
+.green {
+  color: green;
 }

@@ -1,8 +1,7 @@
 .container {
   position: relative;
-  width: 75%;
+  width: 100%;
   margin: auto;
-  margin-top: 2rem;
 }
 
 .main_image {
@@ -16,5 +15,5 @@
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: orange;
+  color: white;
 }
