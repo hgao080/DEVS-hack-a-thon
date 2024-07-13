@@ -13,13 +13,13 @@ const ContactUs = () => {
       <div className={styles.container}>
         <form action="/action_page.php">
           <label htmlFor="fname">First Name</label>
-          <input type="text" id="fname" name="firstname" placeholder="Your name.." />
+          <input type="text" id="fname" name="firstname" placeholder="Your name.." className={styles.inputText}/>
 
           <label htmlFor="lname">Last Name</label>
-          <input type="text" id="lname" name="lastname" placeholder="Your last name.." />
+          <input type="text" id="lname" name="lastname" placeholder="Your last name.." className={styles.inputText}/>
 
           <label htmlFor="subject">Subject</label>
-          <textarea id="subject" name="subject" placeholder="Write something.." style={{height: "200px"}}></textarea>
+          <textarea id="subject" name="subject" placeholder="Write something.." style={{height: "200px"}} className={styles.inputText}></textarea>
 
           <input type="submit" value="Submit" />
         </form>
