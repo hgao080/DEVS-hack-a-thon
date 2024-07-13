@@ -1,23 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './Board.css';
 import Profiles from '../Components/Profiles';
-import Sidebar from '../Components/Sidebar'; // Assuming Sidebar.js exports Sidebar component
-import { FaLeaf } from 'react-icons/fa'; // Importing FaLeaf from react-icons/fa
-import { Leaderboard } from '../Components/Database'; // Adjust path as per your setup
+import Sidebar from '../Components/Sidebar';
+import { FaLeaf } from 'react-icons/fa';
+import { Leaderboard } from '../Components/Database';
 
 export default function Board() {
-    const handleClick = () => {
-        // Handle click logic if needed
+    const [viewMode, setViewMode] = useState('weekly'); 
+
+    const handleClick = (mode) => {
+        setViewMode(mode);
     };
 
     return (
         <div className="dashboard">
-            {/* Sidebar */}
             <div className="sidebar">
                 <Sidebar />
             </div>
-
-            {/* Right Section: Leaderboard */}
             <div className="right">
                 <div className="title">
                     <div className="titleright">
@@ -28,11 +27,11 @@ export default function Board() {
                 <div className="Leaderboard">
                     <h1>Leaderboard</h1>
                     <div className="duration">
-                        <button data-id='7'>Weekly</button>
-                        <button data-id='365'>Yearly</button>
+                    <button onClick={() => handleClick('weekly')} className={viewMode === 'weekly' ? 'active' : ''} data-id='7'>Weekly</button>
+                    <button onClick={() => handleClick('yearly')} className={viewMode === 'yearly' ? 'active' : ''} data-id='365'>Yearly</button>
                     </div>
 
-                    <Profiles Leaderboard={Leaderboard} />
+                    <Profiles Leaderboard={Leaderboard} viewMode = {viewMode} />
                 </div>
             </div>
         </div>
