@@ -1,10 +1,14 @@
 import React from 'react';
 import '../Pages/Board.css'
 
-export default function profiles({Leaderboard}) {
+export default function profiles({Leaderboard, viewMode}) {
+    const filteredData = Leaderboard.map(person => ({
+        ...person,
+        score: viewMode === 'weekly' ? person.weeklyScore : person.yearlyScore
+    }));
     return (
         <div id="profile">
-            <Item data = {Leaderboard}/>
+            <Item data = {filteredData}/>
         </div>
     )
 }

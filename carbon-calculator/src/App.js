@@ -7,11 +7,16 @@ import Board from './Pages/Board';
 import About from "./Pages/About"
 import DashboardImprovement from "./Pages/DashboardImprovement"
 import ContactUs from "./Pages/ContactUs";
+import Login from "./Pages/Login"
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <MainPage />,
+  },
+  {
+    path: '/login',
+    element: <Login />,
   },
   {
     path: '/daily',

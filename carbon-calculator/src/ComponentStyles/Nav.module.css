@@ -1,23 +1,32 @@
 .nav {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 1px green solid;
 }
 
 .buttons {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-}
-
-Link {
-  text-decoration: none;
+  margin: 20px 0;
 }
 
 .buttons #active {
-  color: black;
+  color: white;
+  background-color: green;
   text-decoration: underline;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 1rem;
+}
+
+.buttons li {
+  padding: 0.5rem 0.7rem;
 }
 
 .buttons > li:hover {
   cursor: pointer;
+  transform: translateY(-2px);
+  transition: transform 0.4s ease-out;
+  background-color: green;
+  color: white;
+  border-color: white;
 }
