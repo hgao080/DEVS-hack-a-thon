@@ -65,4 +65,45 @@ h1 {
     margin-left: 0px;
 }
 
+.dashboard {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.sidebar {
+  height: 100%;
+}
+
+.right {
+  width: 100%;
+  border: 1px solid black;
+  height: 50px;
+}
+
+.title {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.titleleft {
+  font-size: 26px;
+  margin-left: 20px;
+}
+
+.titleright {
+  display: flex;
+  height: 100%;
+  margin-left: 1050px;
+  align-items: center;
+}
+
+.green {
+  color: green;
+}
+
+
   
