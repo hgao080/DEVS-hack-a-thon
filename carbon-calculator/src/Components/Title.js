@@ -36,7 +36,7 @@ const prevSlide = () => {
 };
 
 useEffect(() => {
-    const interval = setInterval(nextSlide, 7000); // Automatically change slide every 7 seconds
+    const interval = setInterval(nextSlide, 5000); // Automatically change slide every 7 seconds
     return () => clearInterval(interval);
 }, [currentSlide]);
 
